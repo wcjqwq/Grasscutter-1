@@ -1,26 +1,39 @@
 {
   "details": {
     "name": "Simplified Chinese",
-    "authors": ["360NENZ"],
+    "authors": ["360NENZ","lxzqaq"],
     "locale": "zh-cn",
-    "version": "1.0.0-snapshot"
+    "version": "1.1.0-snapshot"
   },
   "exception": {
-    "error": "发生错误。"
+    "error": "发生错误。",
+    "packet": "收到无效数据包",
+    "player": "无效玩家",
+    "avatar": "无效的avatar",
+    "lua": "执行lua脚本出现错误"
   },
   "system": {
     "startup": {
       "loading": "正在启动 Grasscutter...",
       "done": "Grasscutter 在 {0} 秒内启动。"
     },
-    "shutdown": "正在关闭 Grasscutter..."
+    "shutdown": "正在关闭 Grasscutter...",
+    "debug_enabled": "已启用调试模式",
+    "console_error": "读取控制台时出错",
+    "dispatch":{
+      "invalid_key": "无效的dispatch key: {0}."
+    }
   },
   "network": {
     "exception": "传输过程中捕获到异常。",
     "invalid_address": "提供的地址 {0}:{1} 无效。",
     "bind_failed": "绑定到端口 {0} 失败。确保该端口未被使用。",
     "no_keystore": "无法访问密钥库 {0}。确保该文件存在并且可读。",
-    "bad_password": "无法访问密钥库 {0}。确保指定的密码是正确的。"
+    "bad_password": "无法访问密钥库 {0}。确保指定的密码是正确的。",
+    "packet": {
+      "inbound": "&c>> {0} &e({1}) &cfrom &b{2}",
+      "outbound": "&a<< {0} &e({1}) &cfrom &b{2}"
+    }
   },
   "server": {
     "dedicated": {
@@ -29,6 +42,14 @@
       "reload": {
         "start": "正在重新加载服务器...",
         "done": "重新加载完成。 ({0}s)"
+      },
+      "resources":{
+          "done": "完成加载resource {0}ms.",
+          "map_error": "无法获取{0}的地图",
+          "zip_error": "无法扫描resources的zip",
+          "no_resources": "无法在resources的zip里面找到文件",
+          "no_file": "找不到resources文件",
+          "add_resources": "请将 {0} 添加到您的工作目录"      
       }
     },
     "http": {
@@ -36,7 +57,13 @@
       "router_error": "无法设置路由 {0}."
     },
     "game": {
-      "done": "游戏服务器在端口 {0} 上启动。可在 {1}:{0} 访问。"
+      "done": "游戏服务器在端口 {0} 上启动。可在 {1}:{0} 访问。",
+      "unavailable": "游戏服务器目前不可用",
+      "client": {
+        "connected": "从 {0} 连接的客户端",
+        "disconnected": "客户端从 {0} 断开连接",
+        "error": "客户端 {0} 遇到错误"
+      }
     }
   },
   "database": {
@@ -44,5 +71,22 @@
   },
   "account": {
     "not_found": "找不到账户"
+  },
+  "command": {
+    "exception": {
+      "not_found": "找不到命令",
+      "execute": "执行命令遇到错误",
+      "usage": "提供的参数无效",
+      "argument": "为 {0} 提供了无效参数",
+      "permission": "您没有使用此命令的权限",
+      "sender": "请运行此命令 {0}！"
+    },
+    "account": {
+      "invalid": {
+        "user_id": "用户 ID {0} 无效"
+      },
+      "username_taken": "用户名为 {0} 的帐户已存在",
+      "user_id_taken": "用户 ID 为 {0} 的帐户已存在"
+    }
   }
 }
